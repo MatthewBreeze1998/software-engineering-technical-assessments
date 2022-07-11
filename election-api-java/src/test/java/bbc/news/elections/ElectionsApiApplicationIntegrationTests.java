@@ -47,47 +47,52 @@ class ElectionsApiApplicationIntegrationTests {
 
 	@Test
 	public void first5Test() throws Exception {
-		Scoreboard scoreboard = runTest(5);
-
+		Scoreboard scoreboard = runTest(5); 
+		
+		
 		assertNotNull(scoreboard);
+		
+		
+//		String winner = scoreboard.getWinner();
 		// assert LD == 1
 		// assert LAB = 4
-		// assert winner = noone
+		// assert winner == "noone";
 	}
+
+//	@Test
+//	public void first100Test() throws Exception {
+//		Scoreboard scoreboard = runTest(100);
+//
+//		assertNotNull(scoreboard);
+//		// assert LD == 12
+//		// assert LAB == 56
+//		// assert CON == 31
+//		// assert winner = noone
+//	}
+
+//	@Test
+//	public void first554Test() throws Exception {
+//		Scoreboard scoreboard = runTest(554);
+//
+//		assertNotNull(scoreboard);
+//		// assert LD == 52
+//		// assert LAB = 325
+//		// assert CON = 167
+//		// assert winner = LAB
+//	}
 
 	@Test
-	public void first100Test() throws Exception {
-		Scoreboard scoreboard = runTest(100);
-
-		assertNotNull(scoreboard);
-		// assert LD == 12
-		// assert LAB == 56
-		// assert CON == 31
-		// assert winner = noone
-	}
-
-	@Test
-	public void first554Test() throws Exception {
-		Scoreboard scoreboard = runTest(554);
-
-		assertNotNull(scoreboard);
-		// assert LD == 52
-		// assert LAB = 325
-		// assert CON = 167
-		// assert winner = LAB
-	}
-
-	@Test
-	public void allTest() throws Exception {
-		Scoreboard scoreboard = runTest(650);
-
-		assertNotNull(scoreboard);
-		// assert LD == 62
-		// assert LAB == 349
-		// assert CON == 210
-		// assert winner = LAB
-		// assert sum = 650
-	}
+//	public void allTest() throws Exception {
+//		Scoreboard scoreboard = runTest(650);
+//		String winner = scoreboard.getWinner();
+//
+//		assertNotNull(scoreboard);
+//		// assert LD == 62
+//		// assert LAB == 349
+//		// assert CON == 210
+//		// assert winner == "LAB";
+//		// assert sum = 650
+//	}
 
 
 	private Scoreboard runTest(int numberOfResults) throws Exception {
